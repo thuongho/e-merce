@@ -1,3 +1,66 @@
 yarn add node-sass
 
 webpack and babel will convert sass to css
+
+yarn add react-router-dom
+
+if there are conflicts in version for dependencies
+package.json
+"resolutions": {
+  "babel-jest": "24.7.1"
+}
+
+import BrowserRouter in index.js and wrap around <App />
+
+Route
+- exact: true or false for exact match
+- path: pattern url looking to match
+- component
+
+Switch
+  Route
+  - the moment it sees something match, it will not render the other Routes
+
+props
+- history
+-- equivalent to use a link but more dynamic
+-- can use in componentDidMount
+- location: where we are currently, full url
+- match
+
+<Link to='/path
+- using js to which component to remount/re-render
+
+<button onClick={() => props.history.push('/path)}
+
+match
+- allows us to build out nested structure
+- it will match the pattern and doesn't care how deeply nested the route is to generate a dynamic path
+
+Route history is only passed into it's first child
+- dont prop tunneling
+-- passing history down the children til it reaches the child that needs it
+-- bad practice cuz there are children that don't need it
+
+withRouter
+- higher order component
+- function takes a component and transform it into another higherform of itself
+
+export default withRouter(MenuItem)
+
+<div className='directory-menu'>
+  { this.state.sections.map(({ title, imageUrl, id, size }) => (
+    <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+  ))}
+</div>
+- since the destructured attributes are mapped out the same, we can just use spread
+<div className='directory-menu'>
+  { this.state.sections.map(({ id, ...otherSectionProps }) => (
+    <MenuItem key={id} {...otherSectionProps} />
+  ))}
+</div>
+
+
+
+
+
