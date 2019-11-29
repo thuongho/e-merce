@@ -60,6 +60,9 @@ export default withRouter(MenuItem)
   ))}
 </div>
 
+importing svg
+import { ReactComponent as Logo }
+- tells create react app that you want a react component that renders SVG rather than its filename
 
 
 
