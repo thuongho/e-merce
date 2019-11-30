@@ -64,6 +64,22 @@ importing svg
 import { ReactComponent as Logo }
 - tells create react app that you want a react component that renders SVG rather than its filename
 
+firebase
+develop
+- create a project
+- project overview > web icon
+-- register app
+-- copy firebaseConfig
+
+yarn add firebase
+add firebase.util.js
+- configures firebase auth
+
+firebase > authentication > sign-in method > edit google
+- enable
+- project support email
+- save
+
 
 
 
