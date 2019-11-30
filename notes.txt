@@ -80,6 +80,21 @@ firebase > authentication > sign-in method > edit google
 - project support email
 - save
 
+firestore
+- firebase > database > create database
+- nosql db
+-- giant json
+- collection
+-- array of things
+-- i.e. user collection, cartItems collection
+
+query
+const firestore = firebase.firestore();
+firestore.collection('users').doc('<userId>').collections('cartItems')
+firestore.doc('/users/<userId>/cartItems/...)
+- equivalent to the query above to get the document (item)
+firestore.collection('/users/<userId>/cartItems')
+- to get the collection
 
 
 

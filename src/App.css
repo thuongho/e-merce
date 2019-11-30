@@ -7,3 +7,11 @@ a {
   text-decoration: none;
   color: black;
 }
+
+/**
+  * reset box sizing as it affects the input component protruding
+  * prevents borders and margins affecting the size
+***/
+* {
+  box-sizing: border-box;
+}
