@@ -96,5 +96,20 @@ firestore.doc('/users/<userId>/cartItems/...)
 firestore.collection('/users/<userId>/cartItems')
 - to get the collection
 
+firestore
+- returns 2 types of objects
+- references
+-- object that represents the current place in db
+-- firestore.doc('/users/:userId)
+-- firestore.collection('/users)
+- snapshots
+
+documentSnapshot
+- .exists
+-- check if document exists
+- .data()
+-- get actual properties json
+-- snapshot alone doesn't give any data
+-- snapshot.data() will return attributes
 
 
