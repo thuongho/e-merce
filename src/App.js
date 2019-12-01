@@ -33,8 +33,8 @@ class App extends React.Component {
               ...snapShot.data()
             }
           // async callback
-          // }, () => {
-          //   console.log('create user', this.state);
+          }, () => {
+            // console.log('create user', this.state);
           });
         });
       } else {

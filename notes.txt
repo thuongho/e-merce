@@ -112,4 +112,6 @@ documentSnapshot
 -- snapshot alone doesn't give any data
 -- snapshot.data() will return attributes
 
+firebase
+- enable email and password
 
