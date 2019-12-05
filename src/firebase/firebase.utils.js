@@ -20,6 +20,7 @@ const config = {
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
+  console.log('userAuth', userAuth);
   // if it is null, exit
   if (!userAuth) return;
 
@@ -28,12 +29,13 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   // create a new user if doesn't exist
   if (!snapShot.exists) {
-    // const { displayName, email } = userAuth;
-    const { email } = userAuth;
+    const { displayName, email } = userAuth;
+    // const { email } = userAuth;
     const createdAt = new Date();
 
     try {
       await userRef.set({
+        displayName,
         email,
         createdAt,
         ...additionalData

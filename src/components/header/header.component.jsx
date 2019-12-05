@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import { auth } from '../../firebase/firebase.utils';
+
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 import './header.styles.scss';
 
@@ -23,4 +26,12 @@ const Header = ({ currentUser }) => (
   </div>
 );
 
-export default Header;
+// function that allows us to access state
+// state is rootreducer
+// mapStateToProps is standard namin for redux
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+// first arg of connect is access to rootreducer, which gives null value for currentUser
+export default connect(mapStateToProps)(Header);

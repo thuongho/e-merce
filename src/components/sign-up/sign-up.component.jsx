@@ -41,7 +41,9 @@ class SignUp extends React.Component {
         password
       );
 
-      await createUserProfileDocument(user, { displayName });
+      user['displayName'] = displayName;
+      await createUserProfileDocument(user);
+      // await createUserProfileDocument(user, { displayName });
       // reset form
       this.setState({
         displayName: '',

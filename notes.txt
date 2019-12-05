@@ -153,3 +153,20 @@ Redux setup
 - store
 -- has middleware to accept all the actions before pushing to root-reducer
 -- pass into Provider
+
+connect 
+- higher order component
+-- takes a component and return a new supped up component
+- lets us modify component to access things related to redux
+
+connect()(Header)
+- connect header component
+- remove currentUser state passed into header from App.js
+
+const mapStateToProps = state =>
+connect(mapStateToProps)(Component)
+- use this pattern in component anywhere that needs to access state
+
+convert App to using connect
+- no longer need state and constructor
+- remove setState and just use setuCurrentUser
