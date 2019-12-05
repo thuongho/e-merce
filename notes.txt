@@ -115,3 +115,41 @@ documentSnapshot
 firebase
 - enable email and password
 
+
+************************
+8. REDUX
+************************
+REDUX
+- good for managing large state
+- useful for sharing data btw components
+- predictable state management using the 3 principles
+1. single source of truth
+2. state is read only
+3. changes using pure functions
+
+Redux Flow
+action (middleware) > root reducer > store (state) > dom change
+
+render a new object so that the component rerender
+
+reducer is just a function that takes (currentState, action)
+
+yarn add redux redux-logger react-redux
+
+pass store into Provider
+- app can now access redux
+
+Redux setup
+- yarn add redux redux-logger react-redux
+- add Provider to index.js
+- create redux folder
+- root-reducer.js
+-- combine all the reducers
+- user/
+-- user.reducer
+** listening on action.type SET_CURRENT_USER and return new state
+-- user.actions
+** method that returns user base on setuCurrentUser
+- store
+-- has middleware to accept all the actions before pushing to root-reducer
+-- pass into Provider
