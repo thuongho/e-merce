@@ -170,3 +170,6 @@ connect(mapStateToProps)(Component)
 convert App to using connect
 - no longer need state and constructor
 - remove setState and just use setuCurrentUser
+
+render in jsx
+- adds js
