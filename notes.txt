@@ -187,4 +187,17 @@ cart dropdown
 -- add cart.reducer to root-reducer
 -- cart.reducer will listen to the dispatch
 
+addItem to cart
+- add cartItem to state in cart.reducer
+- add ADD_ITEM to cart.type
+- add new action addItem to cart.action that represents what we are gonna do with the cartItems array
+-- define addItem which is a function that gets the item and generates a new action with type ADD_ITEM and passes in the payload
+- add CartActionTypes.ADD_ITEM case in cart.reducer so that it can listen to it
+-- return new state of overall cart.reducer with cartItems as a new array that spreads in the cartItems and append action.payload to the end
+- update collections-item so that it pulls in new props
+-- the new props has addItem, which is a method that dispatches addItem with the item
+-- addItem with the item is reference back to addItem in cart.action
+- now the custom button has access to this addItem props with onClick
+
+
 
