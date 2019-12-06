@@ -173,3 +173,18 @@ convert App to using connect
 
 render in jsx
 - adds js
+- use in redirect
+
+cart dropdown
+- create cart-dropdown component
+- make it hide and show base on the state
+-- create cart.reducer
+** cart reducer handles changing the state from the initial state
+-- create cart.action
+** a function that returns the type TOGGLE_CART_HIDDEN
+-- add connect to cart-icon
+** mapDispatchToProps - dispatch type from cart.action which returns type TOGGLE_CART_HIDDEN
+-- add cart.reducer to root-reducer
+-- cart.reducer will listen to the dispatch
+
+
