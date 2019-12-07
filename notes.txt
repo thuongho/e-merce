@@ -262,3 +262,11 @@ extensible code
 
 connect
 - pass dispatch into props if we don't pass in mapDispatchToProps
+
+clear items from cart
+- cart.types
+-- declare CLEAR_CART_ITEM type
+- cart.action
+-- create a clearItem action
+- cart.reducer 
+-- catch the action in reducer
