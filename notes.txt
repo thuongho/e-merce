@@ -199,5 +199,21 @@ addItem to cart
 -- addItem with the item is reference back to addItem in cart.action
 - now the custom button has access to this addItem props with onClick
 
+memoization
+- caching of selector value
+- example of cartItems.reduce always rendering and causing a performance issue
+reselect
+- if the state is the same, don't pass into the component
+- allows to memoize and not re-render a component if the state value does not change
 
+yarn add reselect
+create cart.selector.js
+
+inputSelector
+- doesn't use reselect
+outputSelector
+- uses reselect
+
+createSelector
+- return an item that is memoize
 
