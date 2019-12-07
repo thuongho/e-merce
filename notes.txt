@@ -208,6 +208,8 @@ reselect
 
 yarn add reselect
 create cart.selector.js
+- add selectors to return memoized items
+- memoized items doesn't rerender if the state items not related to them update
 
 inputSelector
 - doesn't use reselect
@@ -216,4 +218,18 @@ outputSelector
 
 createSelector
 - return an item that is memoize
+
+createStructuredSelector
+- comes from reselect
+- for multiple selectors, createStructuredSelector will pass the state to each selector
+
+const mapStateToProps = state => ({
+  currentUser: selectCurrentUser(state),
+  hidden: selectCartHidden(state)
+});
+
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
+});
 
