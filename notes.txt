@@ -295,3 +295,26 @@ root.reducer
 
 index.js
 - wrap <App/> in <PersistGate></PersistGate>
+
+
+************************
+10. REDUX 2
+************************
+- move section data from directory component into Redux
+- directory.reducer
+-- initial_state
+-- switch case that returns default state
+- root.reducer
+-- add directory to root.reducer
+- directory component
+-- change from class to function expression cuz it doesn't have state
+-- connect to get states
+- directory selector
+-- redux / reselect
+-- directorySelector function expression that returns directory from state
+-- sectionSelector that uses createSelector to return sections off of directory
+- directory component
+-- import sectionsSelector
+-- mapStateToProps that returns sections off of sectionsSelector(state)
+-- pass mapStateToProps into connect
+-- Directory component has access to sections
