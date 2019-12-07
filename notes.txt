@@ -233,3 +233,32 @@ const mapStateToProps = createStructuredSelector({
   hidden: selectCartHidden
 });
 
+JS evaluate to false
+0
+false
+undefined
+null (object)
+NaN (number)
+"" (string)
+
+withRouter
+- wrap withRouter to HOC
+- gives access to history
+withRouter(connect(mapStateToProps)(CartDropDown));
+- withRouter is taking the component that got returned from connect as an arg
+- order matters as it evaluates from inside out
+- pass match, history and location into component
+
+checkoutPage
+- cart.selector - selectCArtTotal
+- connect from react-redux
+- createStructure from reselect
+- import selectCartTotal, selectCartItems
+
+extensible code
+- reusable code
+- structure the project in a way that easy to see
+- simple code that anyone can read
+
+connect
+- pass dispatch into props if we don't pass in mapDispatchToProps
