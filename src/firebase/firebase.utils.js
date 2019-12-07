@@ -6,8 +6,10 @@ import 'firebase/firestore';
 // AUTH
 import 'firebase/auth';
 
+const FB_API_KEY = process.env.REACT_APP_FB_KEY;
+
 const config = {
-  apiKey: "AIzaSyChxok0sdUDZ8A-9uGNzC2EQCA3LO76_2I",
+  apiKey: FB_API_KEY,
   authDomain: "emerce-db.firebaseapp.com",
   databaseURL: "https://emerce-db.firebaseio.com",
   projectId: "emerce-db",

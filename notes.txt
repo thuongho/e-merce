@@ -270,3 +270,28 @@ clear items from cart
 -- create a clearItem action
 - cart.reducer 
 -- catch the action in reducer
+
+
+************************
+9. SESSION STORAGE & PERSISTENCE
+************************
+sessionStorage
+- stores til the tab is closed
+localStorage
+- stores til it is cleared
+
+REdux Persist
+yarn add redux-persist
+
+store
+- a combination of rootreducer and middleware
+- add persistStore
+
+root.reducer
+- import storage from 'redux-persist/lib/storage';
+-- localStorage
+- persistReducer(persistConfig, rootReducer)
+-- modifies rootReducer with persistence capabilities
+
+index.js
+- wrap <App/> in <PersistGate></PersistGate>
