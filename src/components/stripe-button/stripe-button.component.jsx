@@ -14,7 +14,7 @@ const StripeCheckoutButton = ({ price }) => {
   return (
     <StripeCheckout 
       label='Pay Now'
-      name='DJI Swags'
+      name='DJM Swags'
       billingAddress
       shippingAddress
       image='https://svgshare.com/i/CUz.svg'

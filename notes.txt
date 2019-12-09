@@ -358,7 +358,7 @@ yarn add react-stripe-checkout
 ************************
 14. DEPLOY TO PROD
 ************************
-heroku create dji-swag --buildpack https://github.com/mars/create-react-app-buildpack.git
+heroku create djm-swag --buildpack https://github.com/mars/create-react-app-buildpack.git
 - buildpack deploys react as a static project
 - create a new project with heroku cli
 
@@ -374,3 +374,34 @@ if (process.env.NODE_ENV === 'development') {
   middlewares.push(logger);
 }
 
+
+************************
+15. CSS IN JS
+************************
+styled-components
+
+yarn add styled-components
+- use js to set the styles
+
+import styled, { css } from 'styled-components';
+import { Link } from 'react-router-dom';
+
+const OptionCss = css`
+  padding: 10px 15px;
+  cursor: pointer;
+`;
+- CSS block that can be resused
+export const OptionLink = styled(Link)`
+  ${OptionCss}
+`;
+- pass link into styled
+<Link to='/contact' /> becomes <OptionLink to='/contact'>CONTACT</OptionLink>
+
+export const HeaderContainer = styled.div`
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+`;
+- styling using js
