@@ -327,5 +327,20 @@ index.js
 Route
 - gives ShopPage access to match, location, history in props
 
-:categoryId
-match.params.categoryId
+:collectionId
+match.params.collectionId
+
+mapStateToProps = (state, ownProps)
+- mapStateToProps has 2 args
+- ownProps is the props of the component
+- ownProps.match.params.collectionId
+
+const mapStateToProps = (state, ownProps) => ({
+  collection: selectCollection(ownProps.match.params.collectionId)(state)
+});
+- js curry
+- bind collectionId to the function and then invoke with state
+
+data normalization
+- storing lists elements inside an object instead of array
+- faster search
