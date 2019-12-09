@@ -318,3 +318,14 @@ index.js
 -- mapStateToProps that returns sections off of sectionsSelector(state)
 -- pass mapStateToProps into connect
 -- Directory component has access to sections
+
+
+************************
+11. Advance Routing
+************************
+<Route path='/shop' component={ShopPage} />
+Route
+- gives ShopPage access to match, location, history in props
+
+:categoryId
+match.params.categoryId
