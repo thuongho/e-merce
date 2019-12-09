@@ -353,3 +353,24 @@ data Flow
 13. STRIPE PAYMENTS
 ************************
 yarn add react-stripe-checkout
+
+
+************************
+14. DEPLOY TO PROD
+************************
+heroku create dji-swag --buildpack https://github.com/mars/create-react-app-buildpack.git
+- buildpack deploys react as a static project
+- create a new project with heroku cli
+
+git push heroku master
+- push build to heroku
+
+optimize production
+store.js
+- logger middleware
+
+const middlewares = [];
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger);
+}
+
