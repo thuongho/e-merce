@@ -344,3 +344,12 @@ const mapStateToProps = (state, ownProps) => ({
 data normalization
 - storing lists elements inside an object instead of array
 - faster search
+
+data Flow
+- how much of that data do I want (selectors)
+
+
+************************
+13. STRIPE PAYMENTS
+************************
+yarn add react-stripe-checkout
