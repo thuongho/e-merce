@@ -405,3 +405,6 @@ export const HeaderContainer = styled.div`
   margin-bottom: 25px;
 `;
 - styling using js
+
+<OptionLink as='div' />
+- makes this link as a div
