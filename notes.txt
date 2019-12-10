@@ -408,3 +408,6 @@ export const HeaderContainer = styled.div`
 
 <OptionLink as='div' />
 - makes this link as a div
+
+styled
+- takes in nesting like scss
