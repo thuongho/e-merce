@@ -23,7 +23,22 @@ class ShopPage extends React.Component {
   componentDidMount() {
     const { updateCollections } = this.props;
     const collectionsRef = firestore.collection('collections');
-    this.unsubscribeFromSnapshot = collectionsRef.onSnapshot(async snapShot => {
+    // Observer Pattern - live update stream
+    // this.unsubscribeFromSnapshot = collectionsRef.onSnapshot(async snapShot => {
+    //   const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
+    //   updateCollections(collectionsMap);
+    //   this.setState({ loading: false });
+    // });
+
+    // Native fetch
+    // fetch(
+    //   'https://firestore.googleapis.com/v1/projects/emerce-db/databases/(default)/documents/collections'
+    // )
+    // .then(response => response.json())
+    // .then(collections => console.log('collections', collections))
+
+    // Promise pattern - not live update
+    collectionsRef.get().then(snapShot => {
       const collectionsMap = convertCollectionsSnapshotToMap(snapShot);
       updateCollections(collectionsMap);
       this.setState({ loading: false });
