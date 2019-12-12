@@ -470,3 +470,10 @@ getting data from firestore into app
 - add redux to shop
 - dispatch the action
 
+React knows that if you are a class component and you write
+class ShopPage extends React.Component {
+  state = {
+    loading: true
+  }
+}
+- it will auto add constructor and super for you
