@@ -460,3 +460,13 @@ firestore.batch()
 addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })));
 - destructure to get only title and items to put into db
 
+getting data from firestore into app
+- query for collections using firestore
+- listen to the snapshot
+- convert the snapshot to map data
+- create type
+- create action
+- listen to the action in the reducer
+- add redux to shop
+- dispatch the action
+
