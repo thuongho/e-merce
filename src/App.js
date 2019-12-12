@@ -20,8 +20,7 @@ class App extends React.Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUsers, collectionsArray } = this.props;
-    console.log('collectionsArray', collectionsArray);
+    const { setCurrentUsers } = this.props;
     // subscribed to auth
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       // only set when not signing out
