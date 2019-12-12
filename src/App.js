@@ -11,16 +11,18 @@ import SignInAndSignUpPage from './pages/sign-in-and-sign-up/sign-in-and-sign-up
 import CheckoutPage from './pages/checkout/checkout.component';
 
 import Header from './components/header/header.component';
-import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { auth, createUserProfileDocument, addCollectionAndDocuments } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.actions';
 import { selectCurrentUser } from './redux/user/user.selectors';
+import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
 
 class App extends React.Component {
 
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    const {setCurrentUsers} = this.props;
+    const {setCurrentUsers, collectionsArray } = this.props;
+    console.log('collectionsArray', collectionsArray);
     // subscribed to auth
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       // only set when not signing out
@@ -37,6 +39,7 @@ class App extends React.Component {
         // set to null on sign out
         setCurrentUsers(userAuth);
       }
+      // addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })));
     });
   }
 
@@ -44,7 +47,7 @@ class App extends React.Component {
     // unsubscribe when the component is destroyed to prevent memory leak
     this.unsubscribeFromAuth();
   }
-
+s
   render() {
     return (
       <div>
@@ -73,7 +76,8 @@ class App extends React.Component {
 // get currentUser from redux
 // destructure user from state
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 });
 
 const mapDispatchToProps = dispatch => ({

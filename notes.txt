@@ -411,3 +411,52 @@ export const HeaderContainer = styled.div`
 
 styled
 - takes in nesting like scss
+
+come back and finish converting the other components to styled-components
+https://github.com/zhangmyihua/lesson-26-complete
+
+
+************************
+16. Advanced Redux + Firebase
+************************
+Refresher
+Firestore returns
+- references
+- snapshots
+-- collection snapshot is called a query snapshot
+- these objects can be Document or Collection
+- firestore will always return these objects even if nothing exists from the query
+
+queryReference
+- current place in db we are querying
+- get them by calling: 
+firestore.doc('/users/:userId')
+firestore.collections('/users')
+
+documentRef
+- CRUD methods
+- .set(), .get(), .update(), .delete()
+
+collectionSnapshot
+- docs
+-- queryDocSnapshots
+- empty
+-- is docs empty
+- size
+-- docs length
+- collection: collectionSnapshot.docs.map(doc => doc.data())
+-- this gives data of the documents
+
+const collectionRef = firestore.collection('collections');
+collectionRef.doc()
+- firestore will create a document with a unique key
+- if we pass an arg into doc(id)
+-- it will create a key with the arg
+
+firestore.batch()
+- promise all
+- stop process if one of the batch item fails
+
+addCollectionAndDocuments('collections', collectionsArray.map(({ title, items }) => ({ title, items })));
+- destructure to get only title and items to put into db
+
