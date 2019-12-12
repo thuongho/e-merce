@@ -477,3 +477,28 @@ class ShopPage extends React.Component {
   }
 }
 - it will auto add constructor and super for you
+
+
+************************
+18. Asynchronous Redux
+************************
+** PATTERN **
+Redux Thunk
+- redux library that can handle async
+- return a function that is able to handle async action
+
+yarn add redux-thunk
+- middleware that allows us to fire functions
+- add it to store.js
+
+if redux-thunk middleware is enabled, any time you attempt to dispatch a function
+instead of an object, the middleware will call that function with dispatch method
+itself as the first argument
+
+Using Redux to handle async
+- install redux-thunk library
+- include it in middleware of the store.js
+- add FETCH_COLLECTIONS_START, FETCH_COLLECTIONS_SUCCESS, FETCH_COLLECTIONS_FAILURE to shop types
+- add actions and update shop.reducer
+- add selector to return isFetchLoading
+- update shop page with createStructuredSelector
