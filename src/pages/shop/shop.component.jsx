@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 // import { firestore, convertCollectionsSnapshotToMap } from '../../firebase/firebase.utils';
 // import { updateCollections } from '../../redux/shop/shop.actions';
-import { fetchCollectionsAsync } from '../../redux/shop/shop.actions';
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 
 import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
 import CollectionPageContainer from '../collection/collection.container';
@@ -43,8 +43,8 @@ class ShopPage extends React.Component {
     /************* PATTERNS END ***********/
   // }
   componentDidMount() {
-    const { fetchCollections } = this.props;
-    fetchCollections();
+    const { fetchCollectionsStart } = this.props;
+    fetchCollectionsStart();
   }
   
   render() {
@@ -67,7 +67,7 @@ class ShopPage extends React.Component {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchCollections: () => dispatch(fetchCollectionsAsync())
+  fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
 });
 
 // const mapDispatchToProps = dispatch => ({

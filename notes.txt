@@ -524,3 +524,37 @@ compose(
   withSpinner
 )(component)
 
+
+************************
+20. Redux Saga
+************************
+Saga
+- function that runs based on conditions
+
+yarn add redux-saga
+
+all generator function* must have yield
+
+sagas must be in the folder of the related content ie. shop.sagas.js
+
+store.js
+- import createSagaMiddleware from 'redux-saga'
+- const sagaMiddleware = createSagaMiddleware()
+- import generator functions from sagas
+- after const store
+- sagaMiddleware.run(generator method from sagas)
+- sagaMiddleware.run(fetchCollectionStart)
+
+shop.sagas
+- import { takeEvery } from 'redux-saga/effects'
+function* gen() {
+  yield takeEvery(action.types, next gen function)
+}
+
+effects from redux-saga
+yield call
+- similar to async await
+- in case it needs to cancel
+
+yield put
+- equivalent to dispatch an action
