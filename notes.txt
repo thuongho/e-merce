@@ -558,3 +558,17 @@ yield call
 
 yield put
 - equivalent to dispatch an action
+
+take
+- run once
+- blocking
+-- wait for the async to finish before it runs again
+
+takeEvery
+- similar to while loop
+- if condition is true, it will keep taking new tasks
+- non-blocking
+
+root-saga.js
+- all from redux-saga/effects
+- all takes in an array of sagas and let it run on concurrent streams
