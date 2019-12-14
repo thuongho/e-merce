@@ -504,3 +504,23 @@ Using Redux to handle async
 - update shop page with createStructuredSelector
 
 
+************************
+19. Container Pattern
+************************
+component.container.jsx
+- containers don't render anything, they just pass props down component
+import:
+- compose from 'redux'
+- connect
+- createStructuredSelector
+
+compose
+- allows to use multiple wrapper components
+
+do this for CollectionsOverview, CollectionPage, and CartDropDown
+
+compose(
+  connect(mapStateToProps),
+  withSpinner
+)(component)
+
