@@ -502,3 +502,5 @@ Using Redux to handle async
 - add actions and update shop.reducer
 - add selector to return isFetchLoading
 - update shop page with createStructuredSelector
+
+
