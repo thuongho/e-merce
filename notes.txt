@@ -572,3 +572,13 @@ takeEvery
 root-saga.js
 - all from redux-saga/effects
 - all takes in an array of sagas and let it run on concurrent streams
+
+convert googleSignIn from subscription to promise
+- add user types for saga
+-- SIGN_IN_WITH_GOOGLE, SIGN_IN_WITH_EMAIL
+- update user reducer
+- update user actions
+- add user sagas
+- add user sagas to root sagas
+- update App.js
+- update sign-in component

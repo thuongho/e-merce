@@ -22,7 +22,6 @@ const config = {
 firebase.initializeApp(config);
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
-  console.log('userAuth', userAuth);
   // if it is null, exit
   if (!userAuth) return;
 
@@ -86,9 +85,10 @@ export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
 // GOOGLE AUTH UTIL
-const provider = new firebase.auth.GoogleAuthProvider();
+// export googleProvider to use in user saga
+export const googleProvider = new firebase.auth.GoogleAuthProvider();
 // trigger google popup whenever we use auth
-provider.setCustomParameters({ prompt: 'select_account' });
-export const SignInWithGoogle = () => auth.signInWithPopup(provider);
+googleProvider.setCustomParameters({ prompt: 'select_account' });
+export const SignInWithGoogle = () => auth.signInWithPopup(googleProvider);
 
 export default firebase;
