@@ -600,3 +600,10 @@ sign out with saga
 - update user reducer to listen to actions
 - update header component
 - update user saga for signoutstart
+
+clear cart saga
+- add new type
+- action
+- create cart.saga
+-- listen to onsignoutsuccess to clear cart
+- add reducer
