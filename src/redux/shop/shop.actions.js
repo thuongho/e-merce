@@ -21,9 +21,11 @@ export const fetchCollectionsFailure = error => ({
 });
 
 // thunk is an action creator that returns an function that gets dispatch call
+// redux intercept only functions
 export const fetchCollectionsAsync = () => {
   return dispatch => {
     const collectionsRef = firestore.collection('collections');
+    // dispatch to the root reducer the fetchCollectionStart object
     dispatch(fetchCollectionsStart());
 
     collectionsRef

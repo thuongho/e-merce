@@ -13,7 +13,8 @@ const mapStateToProps = createStructuredSelector({
 });
 
 // const CollectionsOverviewContainer = connect(mapStateToProps)(WithSpinner(CollectionsOverview));
-// curry function
+// compose - curry function from right to left
+// pass collectionsOverview into withSpinner
 const CollectionsOverviewContainer = compose(
   connect(mapStateToProps),
   WithSpinner

@@ -582,3 +582,13 @@ convert googleSignIn from subscription to promise
 - add user sagas to root sagas
 - update App.js
 - update sign-in component
+
+recreating persistence
+- add new user type CHECK_USER_SESSION
+- add user action function checkUserSession for saga
+- listen to onCheckUserSession to run isUserAuthenticated
+- isUserAuthenticated
+-- gets userAuth and run getUserSnapshotFromUserAuth
+- App
+-- add checkUserSession mapDispatchToProps
+-- checkUserSession on componentDidMount

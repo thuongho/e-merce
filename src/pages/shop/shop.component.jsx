@@ -9,6 +9,7 @@ import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
 import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
 import CollectionPageContainer from '../collection/collection.container';
 
+// Shop page should be as dumb as possible
 class ShopPage extends React.Component {
   // state = {
   //   loading: true
