@@ -592,3 +592,11 @@ recreating persistence
 - App
 -- add checkUserSession mapDispatchToProps
 -- checkUserSession on componentDidMount
+
+sign out with saga
+- add new user action type
+-- sign_out_start, success, failure
+- add actions
+- update user reducer to listen to actions
+- update header component
+- update user saga for signoutstart
