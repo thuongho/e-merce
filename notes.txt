@@ -621,3 +621,5 @@ sign up saga
 useState
 - change state in functional components like lifecycle hooks
 useEffect
+- use in functional components that use componentDidMount
+- useEffect will fire when rerender is called
