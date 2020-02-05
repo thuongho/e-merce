@@ -607,3 +607,9 @@ clear cart saga
 - create cart.saga
 -- listen to onsignoutsuccess to clear cart
 - add reducer
+
+sign up saga
+- move signup component into a saga
+- sign up start, signup success, signup fail in actions
+- add onsignupstart, signup, onsignupsuccess, signinaftersignup to saga
+- update sign-up component, update reducer
