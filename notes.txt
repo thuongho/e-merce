@@ -613,3 +613,11 @@ sign up saga
 - sign up start, signup success, signup fail in actions
 - add onsignupstart, signup, onsignupsuccess, signinaftersignup to saga
 - update sign-up component, update reducer
+
+
+************************
+21. Hooks
+************************
+useState
+- change state in functional components like lifecycle hooks
+useEffect
